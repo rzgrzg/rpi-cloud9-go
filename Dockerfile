@@ -16,7 +16,7 @@ MAINTAINER Hans Weggeman <hpweggeman@gmail.com>
 
 # Install dependencies
 
- RUN apt-get update && sudo apt-get upgrade
+# RUN apt-get update && sudo apt-get upgrade
 
 
 
