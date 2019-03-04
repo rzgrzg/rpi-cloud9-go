@@ -144,7 +144,7 @@ EXPOSE 3000
 ENV GO_VERSION 1.12
 
 RUN wget https://studygolang.com/dl/golang/go$GO_VERSION.linux-armv6l.tar.gz \
-  | tar xz -C /usr/local/ &&rm -f go$GO_VERSION.linux-armv6l.tar.gz
+  &&tar -zxf go$GO_VERSION.linux-armv6l.tar.gz -C /usr/local/ &&rm -f go$GO_VERSION.linux-armv6l.tar.gz
 
 ENV GOPATH /workspace
 ENV GOROOT /usr/local/go
