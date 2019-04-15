@@ -26,7 +26,7 @@ echo deb http://mirrors.aliyun.com/debian/ stretch main ui >> /etc/apt/raspi.lis
 
 # Install nodejs
 
-RUN apt-get update && apt-get upgrade && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends \
     ca-certificates \
     curl \
     wget \
