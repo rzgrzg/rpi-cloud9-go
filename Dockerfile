@@ -6,9 +6,13 @@
 
 # Pull base image.
 
-FROM resin/rpi-raspbian
+FROM raspbian/stretch:latest
 
 MAINTAINER Hans Weggeman <hpweggeman@gmail.com>
+
+RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak  && \
+echo deb http://mirrors.aliyun.com/raspbian/raspbian/ stretch main contrib non-free rpi >> /etc/apt/sources.list && \
+echo deb http://mirrors.aliyun.com/debian/ stretch main ui >> /etc/apt/raspi.list
 
 # ------------------------------------------------------------------------------
 
