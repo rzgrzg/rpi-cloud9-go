@@ -6,13 +6,9 @@
 
 # Pull base image.
 
-FROM raspbian/stretch:latest
+FROM resin/rpi-raspbian
 
 MAINTAINER Hans Weggeman <hpweggeman@gmail.com>
-
-RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak  && \
-echo deb http://mirrors.aliyun.com/raspbian/raspbian/ stretch main contrib non-free rpi >> /etc/apt/sources.list && \
-echo deb http://mirrors.aliyun.com/debian/ stretch main ui >> /etc/apt/raspi.list
 
 # ------------------------------------------------------------------------------
 
@@ -26,7 +22,7 @@ echo deb http://mirrors.aliyun.com/debian/ stretch main ui >> /etc/apt/raspi.lis
 
 # Install nodejs
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y --no-install-recommends \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
     curl \
     wget \
