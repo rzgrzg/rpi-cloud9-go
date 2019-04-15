@@ -10,10 +10,6 @@ FROM resin/rpi-raspbian
 
 MAINTAINER Hans Weggeman <hpweggeman@gmail.com>
 
-
-RUN mv /etc/apt/sources.list /etc/apt/sources.list.bak  && \
-echo deb http://mirrors.aliyun.com/raspbian/raspbian/ stretch main contrib non-free rpi >> /etc/apt/sources.list && \
-echo deb http://mirrors.aliyun.com/debian/ stretch main ui >> /etc/apt/raspi.list
 # ------------------------------------------------------------------------------
 
 # Install dependencies
