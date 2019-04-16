@@ -13,7 +13,9 @@ MAINTAINER Hans Weggeman <hpweggeman@gmail.com>
 CMD [ "node" ]
 
 # ------------------------------------------------------------------------------
-
+#Set locales
+RUN apt-get update && apt-get install locales -y
+RUN echo en_US.UTF-8 UTF-8 >>/etc/locale.gen && locale-gen
 # Get cloud9 source and install
 
 RUN git clone https://github.com/c9/core.git /tmp/c9
